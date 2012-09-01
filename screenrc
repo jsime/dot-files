@@ -1,0 +1,4 @@
+startup_message off
+nethack on
+vbell off
+caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
