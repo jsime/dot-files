@@ -13,3 +13,13 @@ set numberwidth=5
 
 set ruler
 set rulerformat=%64(%F,\ %l,%c%)
+
+let perl_extended_vars = 1
+let perl_include_pod = 1
+let perl_want_scope_in_variables = 1
+
+au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
+au BufNewFile,BufRead *.mp set filetype=perl
+" this is only valid because the one project I work on that has .asp files is an Apache::ASP Perl project
+au BufNewFile,BufRead *.asp set filetype=perl
+
