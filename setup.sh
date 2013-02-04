@@ -14,7 +14,14 @@ rm ~/.screenrc
 ln -s $SCRIPTDIR/screenrc ~/.screenrc
 
 echo "Setting up perltidy..."
-rm ~/.perltidyrc
+if [[ -e ~/.perltidyrc ]]; then
+    rm ~/.perltidyrc;
+fi
 ln -s $SCRIPTDIR/perltidyrc ~/.perltidyrc
+
+if [[ !(-e ~/.bash_profile) || $(grep -E 'source.*bashprofile' ~/.bash_profile | wc -l) == 0 ]]; then
+    echo "Setting up bash_profile...";
+    echo "source $SCRIPTDIR/bashprofile" >> ~/.bash_profile;
+fi
 
 echo "Done!"
