@@ -19,9 +19,13 @@ if [[ -e ~/.perltidyrc ]]; then
 fi
 ln -s $SCRIPTDIR/perltidyrc ~/.perltidyrc
 
-if [[ !(-e ~/.bash_profile) || $(grep -E 'source.*bashprofile' ~/.bash_profile | wc -l) == 0 ]]; then
-    echo "Setting up bash_profile...";
-    echo "source $SCRIPTDIR/bashprofile" >> ~/.bash_profile;
+if [[ !(-e ~/.bashrc) || $(grep -E "source $SCRIPTDIR/bashrc" ~/.bashrc | wc -l) == 0 ]]; then
+    echo "Setting up bashrc...";
+    echo "" >> ~/.bashrc;
+    echo "# Source in the dot-files bashrc" >> ~/.bashrc;
+    echo "source $SCRIPTDIR/bashrc" >> ~/.bashrc;
+else
+    echo "Bashrc already being sourced..."
 fi
 
 echo "Done!"
