@@ -19,6 +19,12 @@ if [[ -e ~/.perltidyrc ]]; then
 fi
 ln -s $SCRIPTDIR/perltidyrc ~/.perltidyrc
 
+echo "Setting up psql..."
+if [[ -e ~/.psqlrc ]]; then
+    rm ~/.psqlrc;
+fi
+ln -s $SCRIPTDIR/psqlrc ~/.psqlrc
+
 if [[ !(-e ~/.bashrc) || $(grep -E "source $SCRIPTDIR/bashrc" ~/.bashrc | wc -l) == 0 ]]; then
     echo "Setting up bashrc...";
     echo "" >> ~/.bashrc;

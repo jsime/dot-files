@@ -1,0 +1,5 @@
+\timing
+\pset pager off
+\set PROMPT1 '%n@%M %x%/=%# '
+\set PROMPT2 '%n@%M %x%/-%# '
+\set PROMPT3 '>> '
