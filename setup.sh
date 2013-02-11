@@ -10,7 +10,9 @@ ln -s $SCRIPTDIR/vimrc ~/.vimrc
 ln -s $SCRIPTDIR/vim ~/.vim
 
 echo "Setting up screen..."
-rm ~/.screenrc
+if [[ -e ~/.screenrc ]]; then
+    rm ~/.screenrc;
+fi
 ln -s $SCRIPTDIR/screenrc ~/.screenrc
 
 echo "Setting up perltidy..."
