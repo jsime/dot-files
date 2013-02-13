@@ -1,4 +1,6 @@
-# Don't process these customizations if the shell is non-interactive
+export PATH="$PATH:$HOME/bin"
+
+# Don't process the rest of these customizations if the shell is non-interactive
 [[ $- != *i* ]] && return
 
 # append history, don't overwrite it, log only uniques, and don't log some of common commands
