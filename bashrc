@@ -9,6 +9,12 @@ export PAGER="less"
 shopt -s histappend
 export HISTIGNORE="&:[ ]*:exit"
 
+# if we have the source-highlight package installed, modify less to use it
+if [[ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]]; then
+    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+    export LESS=' -R '
+fi
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
