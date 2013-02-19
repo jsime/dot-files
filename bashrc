@@ -1,4 +1,6 @@
 export PATH="$PATH:$HOME/bin"
+export EDITOR="vim"
+export PAGER="less"
 
 # Don't process the rest of these customizations if the shell is non-interactive
 [[ $- != *i* ]] && return
