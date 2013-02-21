@@ -1,9 +1,19 @@
-# Don't process these customizations if the shell is non-interactive
+export PATH="$PATH:$HOME/bin"
+export EDITOR="vim"
+export PAGER="less"
+
+# Don't process the rest of these customizations if the shell is non-interactive
 [[ $- != *i* ]] && return
 
 # append history, don't overwrite it, log only uniques, and don't log some of common commands
 shopt -s histappend
 export HISTIGNORE="&:[ ]*:exit"
+
+# if we have the source-highlight package installed, modify less to use it
+if [[ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]]; then
+    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+    export LESS=' -R '
+fi
 
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
