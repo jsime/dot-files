@@ -36,4 +36,9 @@ else
     echo "Bashrc already being sourced..."
 fi
 
+if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
+    echo "Linking ~/bin to bin-scripts repo...";
+    ln -s ~/proj/bin-scripts ~/bin;
+fi
+
 echo "Done!"
