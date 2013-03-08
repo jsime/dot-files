@@ -15,6 +15,9 @@ if [[ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]]; then
     export LESS=' -R '
 fi
 
+# alias irssi to a command which makes sure the config is up to do
+alias irssi="cat ~/.irssi/config.base ~/.private/irssi > ~/.irssi/config && /usr/bin/irssi"
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
