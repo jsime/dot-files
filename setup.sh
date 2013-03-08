@@ -27,6 +27,12 @@ if [[ -e ~/.psqlrc ]]; then
 fi
 ln -s $SCRIPTDIR/psqlrc ~/.psqlrc
 
+echo "Setting up tmux..."
+if [[ -e ~/.tmux.conf ]]; then
+    rm ~/.tmux.conf;
+fi
+ln -s $SCRIPTDIR/tmux.conf ~/.tmux.conf
+
 if [[ !(-e ~/.bashrc) || $(grep -E "source $SCRIPTDIR/bashrc" ~/.bashrc | wc -l) == 0 ]]; then
     echo "Setting up bashrc...";
     echo "" >> ~/.bashrc;
