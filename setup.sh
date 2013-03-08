@@ -42,6 +42,12 @@ else
     echo "Bashrc already being sourced..."
 fi
 
+echo "Setting up irssi..."
+if [[ -d ~/.irssi ]]; then
+    rm -rf ~/.irssi;
+fi
+ln -s $SCRIPTDIR/irssi ~/.irssi
+
 if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
     echo "Linking ~/bin to bin-scripts repo...";
     ln -s ~/proj/bin-scripts ~/bin;
