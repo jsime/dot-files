@@ -64,7 +64,7 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    topic = { disabled = "yes"; };
+    topic = { disabled = "no"; };
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
@@ -95,7 +95,7 @@ settings = {
     timestamps = "yes";
     completion_char = ",";
     activity_hide_level = "parts joins quits";
-    bell_beeps = "yes";
+    bell_beeps = "n";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
   };
 
