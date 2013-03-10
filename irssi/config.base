@@ -110,7 +110,7 @@ settings = {
   "irc/dcc" = { dcc_download_path = "~/Downloads"; dcc_timeout = "180"; };
 };
 logs = { };
-ignores = ( { level = "JOINS PARTS QUITS MODES"; } );
+ignores = ( { level = ""; } );
 
 hilights = (
   { text = "stopbit"; nick = "no"; word = "yes"; fullword = "yes"; },
