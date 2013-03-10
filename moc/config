@@ -1,0 +1,9 @@
+ReadTags = yes
+MusicDir = ~/Music
+Sort = FileName
+StartInMusicDir = yes
+Theme = dante
+ShowFormat = no
+ShowTime = no
+HideFileExtension = yes
+PLaylistNumbering = no
