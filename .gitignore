@@ -5,3 +5,6 @@ Session.vim
 *~
 irssi/config
 irssi/config.autosave
+moc/cache/
+moc/last_directory
+moc/pid
