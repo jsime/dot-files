@@ -48,6 +48,12 @@ if [[ -d ~/.irssi ]]; then
 fi
 ln -s $SCRIPTDIR/irssi ~/.irssi
 
+echo "Setting up moc..."
+if [[ -d ~/.moc ]]; then
+    rm -rf ~/.moc;
+fi
+ln -s $SCRIPTDIR/moc ~/.moc
+
 if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
     echo "Linking ~/bin to bin-scripts repo...";
     ln -s ~/proj/bin-scripts ~/bin;
