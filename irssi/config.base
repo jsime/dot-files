@@ -37,9 +37,9 @@ statusbar = {
     # window_empty is printed with empty windows
     window = "{sb $winref:$tag/$itemname{sbmode $M}}";
     window_empty = "{sb $winref{sbservertag $tag}}";
-    prompt = "%2 $C %0 >> ";
+    prompt = "%2 $C %N%g >> ";
     prompt_empty = "{prompt $winname}";
-    topic = "%2 $C %0 $topic";
+    topic = "%2 $C %N%g $topic";
     topic_empty = " Irssi v$J - http://irssi.org/help/";
 
     # all of these treated specially, they're only displayed when needed
@@ -101,7 +101,7 @@ settings = {
 
   "perl/core/scripts" = {
     #neat_maxlength = "13";
-    awl_display_key = "%w$N.$H$C$S";
+    awl_display_key = "%N%w$N.$H$C$S%N";
     awl_position = "0";
     awl_sbar_maxlength = "no";
     awl_maxlines = "3";
