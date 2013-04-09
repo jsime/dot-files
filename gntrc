@@ -1,0 +1,9 @@
+[Finch]
+color-available = green; black
+color-idle = cyan; black
+color-away = red; black
+color-offline = gray; black
+color-timestamp = yellow; black
+
+[general]
+small-button = true

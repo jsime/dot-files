@@ -33,6 +33,12 @@ if [[ -e ~/.tmux.conf ]]; then
 fi
 ln -s $SCRIPTDIR/tmux.conf ~/.tmux.conf
 
+echo "Setting up gntrc..."
+if [[ -e ~/.gntrc ]]; then
+    rm ~/.gntrc;
+fi
+ln -s $SCRIPTDIR/gntrc ~/.gntrc
+
 if [[ !(-e ~/.bashrc) || $(grep -E "source $SCRIPTDIR/bashrc" ~/.bashrc | wc -l) == 0 ]]; then
     echo "Setting up bashrc...";
     echo "" >> ~/.bashrc;
