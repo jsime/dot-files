@@ -7,3 +7,5 @@ ShowFormat = no
 ShowTime = no
 HideFileExtension = yes
 PLaylistNumbering = no
+SetXtermTitle = no
+SetScreenTitle = no
