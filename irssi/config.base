@@ -115,6 +115,5 @@ ignores = ( { level = ""; } );
 hilights = (
   { text = "stopbit"; nick = "no"; word = "yes"; fullword = "yes"; },
   { text = "stopbyte"; nick = "no"; word = "yes"; fullword = "yes"; },
-  { text = "jsime"; nick = "no"; word = "yes"; fullword = "yes"; },
-  { text = "taskman"; nick = "no"; word = "yes"; fullword = "yes"; }
+  { text = "jsime"; nick = "no"; word = "yes"; fullword = "yes"; }
 );
