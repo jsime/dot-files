@@ -23,4 +23,4 @@ au BufNewFile,BufRead *.mp set filetype=perl
 au BufNewFile,BufRead *.pgsql set filetype=pgsql
 " this is only valid because the one project I work on that has .asp files is an Apache::ASP Perl project
 au BufNewFile,BufRead *.asp set filetype=perl
-
+au BufNewFile,BufRead *.tt2 set filetype=tt2
