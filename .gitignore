@@ -9,3 +9,5 @@ moc/cache/
 moc/last_directory
 moc/pid
 moc/playlist.m3u
+moc/equalizer
+moc/softmixer

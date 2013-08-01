@@ -27,7 +27,12 @@ function ps1_vc {
         if [[ $BRANCH ]]; then
             echo -n "svn: $BRANCH";
         else
-            echo -n "✗";
+            BRANCH=$(hg branch 2>/dev/null)
+            if [[ $BRANCH ]]; then
+                echo -n "hg: $BRANCH";
+            else
+                echo -n "✗";
+            fi
         fi
     fi
     BRANCH=""
