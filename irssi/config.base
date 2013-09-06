@@ -117,3 +117,39 @@ hilights = (
   { text = "stopbyte"; nick = "no"; word = "yes"; fullword = "yes"; },
   { text = "jsime"; nick = "no"; word = "yes"; fullword = "yes"; }
 );
+
+# Put the following (uncommented) in ~/.private/irssi and then the 'irssi' alias
+# that is added by dot-files/setup.sh will automatically combine the two. This
+# permits keeping all the public bits of one's irssi config in a repo (public or
+# otherwise) while allowing you to avoid advertising all the networks you use
+# and channels you frequent.
+# 
+# servers = (
+#   {
+#     address     = "irc.example.com";
+#     chatnet     = "example";
+#     port        = "6789";
+#     use_ssl     = "yes";
+#     ssl_verify  = "yes";
+#     autoconnect = "yes";
+#   },
+#   {
+#     address     = "irc.foobar.com";
+#     chatnet     = "foobar";
+#     port        = "6767";
+#     use_ssl     = "no";
+#     ssl_verify  = "no";
+#     autoconnect = "no";
+#   }
+# );
+# 
+# chatnets = {
+#   example = { type = "IRC"; nick = "mynick"; };
+#   foobar  = { type = "IRC"; nick = "barbaz"; user_name = "barbaz"; real_name = "Foobar Jones"; };
+# };
+# 
+# channels = (
+#   { name = "#doggechatte"; chatnet = "example"; autojoin = "yes"; },
+#   { name = "#cattechatte"; chatnet = "example"; autojoin = "no"; },
+#   { name = "#fubar";       chatnet = "foobar";  autojoin = "yes"; },
+# );
