@@ -60,6 +60,17 @@ if [[ -d ~/.moc ]]; then
 fi
 ln -s $SCRIPTDIR/moc ~/.moc
 
+echo "Setting up xmonad..."
+if [[ -d ~/.xmonad ]]; then
+    if [[ -d ~/.xmonad/startup.d ]]; then
+        rm -rf ~/.xmonad/startup.d;
+    fi
+else
+    mkdir ~/.xmonad
+fi
+ln -s $SCRIPTDIR/xmonad/xmonad.hs ~/.xmonad/xmonad.hs
+ln -s $SCRIPTDIR/xmonad/startup.d ~/.xmonad/startup.d
+
 if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
     echo "Linking ~/bin to bin-scripts repo...";
     ln -s ~/proj/bin-scripts ~/bin;
