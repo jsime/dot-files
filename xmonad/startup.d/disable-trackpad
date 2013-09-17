@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Disable synaptics trackpad while typing
+syndaemon -d -i 2
