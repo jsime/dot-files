@@ -21,6 +21,10 @@ let perl_extended_vars = 1
 let perl_include_pod = 1
 let perl_want_scope_in_variables = 1
 
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
 set statusline+=\ \ \ [%{&ff}/%Y] 
