@@ -21,9 +21,29 @@ let perl_extended_vars = 1
 let perl_include_pod = 1
 let perl_want_scope_in_variables = 1
 
+set laststatus=2
+set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
+set statusline+=\ \ \ [%{&ff}/%Y] 
+set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
+set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+
 au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
 au BufNewFile,BufRead *.mp set filetype=perl
 au BufNewFile,BufRead *.pgsql set filetype=pgsql
 " this is only valid because the one project I work on that has .asp files is an Apache::ASP Perl project
 au BufNewFile,BufRead *.asp set filetype=perl
 au BufNewFile,BufRead *.tt2 set filetype=tt2
+
+function! HasPaste()
+    if &paste
+        return '[PASTE]'
+    else
+        return ''
+    endif
+endfunction
+
+function! CurDir()
+    let curdir = substitute(getcwd(), $HOME, "~", "")
+    return curdir
+endfunction
+
