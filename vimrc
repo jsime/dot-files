@@ -14,6 +14,9 @@ set numberwidth=5
 set ruler
 set rulerformat=%64(%F,\ %l,%c%)
 
+set incsearch hlsearch
+set ignorecase smartcase
+
 let perl_extended_vars = 1
 let perl_include_pod = 1
 let perl_want_scope_in_variables = 1
