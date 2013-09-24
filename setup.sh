@@ -71,6 +71,12 @@ fi
 ln -s $SCRIPTDIR/xmonad/xmonad.hs ~/.xmonad/xmonad.hs
 ln -s $SCRIPTDIR/xmonad/startup.d ~/.xmonad/startup.d
 
+echo "Setting up Xresources..."
+if [[ -e ~/.Xresources ]]; then
+    rm ~/.Xresources
+fi
+ln -s $SCRIPTDIR/Xresources ~/.Xresources
+
 if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
     echo "Linking ~/bin to bin-scripts repo...";
     ln -s ~/proj/bin-scripts ~/bin;
