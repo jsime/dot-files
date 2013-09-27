@@ -2,6 +2,9 @@ URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.font: xft:Source Code Pro Medium:pixelsize=11
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: /usr/bin/chromium-browser
+URxvt*matcher.Button: 1
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
