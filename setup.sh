@@ -65,6 +65,9 @@ if [[ -d ~/.xmonad ]]; then
     if [[ -d ~/.xmonad/startup.d ]]; then
         rm -rf ~/.xmonad/startup.d;
     fi
+    if [[ -e ~/.xmonad/xmonad.hs ]]; then
+        rm -f ~/.xmonad/xmonad.hs;
+    fi
 else
     mkdir ~/.xmonad
 fi
