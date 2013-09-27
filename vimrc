@@ -1,8 +1,11 @@
 syntax on
 set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 
 set t_Co=256
-color slate
+"color slate
 
 set tabstop=4
 set shiftwidth=4
