@@ -2,7 +2,8 @@ URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: true
-URxvt.font: xft:Source Code Pro Medium:pixelsize=11
+URxvt.font: xft:Source Code Pro Light:pixelsize=11
+URxvt.boldFont: xft:Source Code Pro Medium:pixelsize=11
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: /usr/bin/chromium-browser
 URxvt*matcher.Button: 1
