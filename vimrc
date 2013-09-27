@@ -12,7 +12,7 @@ set shiftwidth=4
 set expandtab
 
 set number
-set numberwidth=5
+"set numberwidth=5
 
 set ruler
 set rulerformat=%64(%F,\ %l,%c%)
