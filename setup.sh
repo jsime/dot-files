@@ -48,6 +48,12 @@ else
     echo "Bashrc already being sourced..."
 fi
 
+echo "Setting up gtkrc..."
+if [[ -e ~/.gtkrc-2.0.mine ]]; then
+    rm ~/.gtkrc-2.0.mine;
+fi
+ln -s $SCRIPTDIR/gtkrc-2.0 ~/.gtkrc-2.0.mine
+
 echo "Setting up irssi..."
 if [[ -d ~/.irssi ]]; then
     rm -rf ~/.irssi;
