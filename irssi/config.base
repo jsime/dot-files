@@ -101,7 +101,7 @@ settings = {
 
   "perl/core/scripts" = {
     #neat_maxlength = "13";
-    awl_display_key = "%N%w$N.$H$C$S%N";
+    awl_display_key = "%N%y$N»$H$C$S%N";
     awl_position = "0";
     awl_sbar_maxlength = "no";
     awl_maxlines = "3";
