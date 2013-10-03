@@ -143,13 +143,13 @@ hilights = (
 #   }
 # );
 # 
-# chatnets = {
-#   example = { type = "IRC"; nick = "mynick"; };
-#   foobar  = { type = "IRC"; nick = "barbaz"; user_name = "barbaz"; real_name = "Foobar Jones"; };
-# };
+# chatnets = (
+#   { example = { type = "IRC"; nick = "mynick"; }; },
+#   { foobar  = { type = "IRC"; nick = "barbaz"; user_name = "barbaz"; real_name = "Foobar Jones"; }; }
+# );
 # 
 # channels = (
 #   { name = "#doggechatte"; chatnet = "example"; autojoin = "yes"; },
 #   { name = "#cattechatte"; chatnet = "example"; autojoin = "no"; },
-#   { name = "#fubar";       chatnet = "foobar";  autojoin = "yes"; },
+#   { name = "#fubar";       chatnet = "foobar";  autojoin = "yes"; }
 # );
