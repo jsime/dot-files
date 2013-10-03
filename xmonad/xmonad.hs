@@ -5,7 +5,6 @@ import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.Run
 import System.IO
 
---main = xmonad defaultConfig
 main = do
     xmonad $ defaultConfig
         { modMask = mod4Mask
