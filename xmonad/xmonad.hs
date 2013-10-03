@@ -1,6 +1,4 @@
 import XMonad
-import qualified Data.Map as M
-import Graphics.X11.Xlib
 import XMonad.Util.EZConfig(additionalKeys, mkKeymap)
 import XMonad.Util.Run
 import System.IO
