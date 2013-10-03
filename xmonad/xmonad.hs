@@ -15,10 +15,10 @@ main = do
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         ]
 
-newKeys x = M.union (keys defaultConfig x) (mkKeymap x myKeys)
-myKeys = [
-        ("<XF86AudioLowerVolume>", spawn "amixer sset -- Master playback 10-"),
-        ("<XF86AudioRaiseVolume>", spawn "amixer sset -- Master playback 10+"),
-        ("S-<XF86AudioRaiseVolume>", spawn "amixer sset -- Master playback 100%"),
-        ("<XF86AudioMute>", spawn "amixer sset -- Master playback 0%")
-    ]
+--newKeys x = M.union (keys defaultConfig x) (mkKeymap x myKeys)
+--myKeys = [
+--        ("<XF86AudioLowerVolume>", spawn "amixer sset -- Master playback 10-"),
+--        ("<XF86AudioRaiseVolume>", spawn "amixer sset -- Master playback 10+"),
+--        ("S-<XF86AudioRaiseVolume>", spawn "amixer sset -- Master playback 100%"),
+--        ("<XF86AudioMute>", spawn "amixer sset -- Master playback 0%")
+--    ]
