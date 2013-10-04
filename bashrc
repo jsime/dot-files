@@ -6,6 +6,9 @@ export LESS=' -FRSX '
 # Don't process the rest of these customizations if the shell is non-interactive
 [[ $- != *i* ]] && return
 
+# set readline mode to Vi style, instead of the default emacs mode
+set -o vi
+
 # append history, don't overwrite it, log only uniques, and don't log some of common commands
 shopt -s histappend
 export HISTIGNORE="&:[ ]*:exit"
