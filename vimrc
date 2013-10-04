@@ -40,6 +40,17 @@ set noerrorbells
 set visualbell
 set t_vb=
 
+let g:gitgutter_highlight_lines = 0
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_modified_removed = '*'
+hi! link SignColumn LineNr
+hi GitGutterAdd          ctermfg=40  ctermbg=235 " an added line
+hi GitGutterChange       ctermfg=226 ctermbg=235 " a changed line
+hi GitGutterDelete       ctermfg=1   ctermbg=235 " at least one removed line
+hi GitGutterChangeDelete ctermfg=136 ctermbg=235 " a changed line followed by at least one removed line
+
 au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
 au BufNewFile,BufRead *.mp set filetype=perl
 au BufNewFile,BufRead *.pgsql set filetype=pgsql
