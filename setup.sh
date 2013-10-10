@@ -4,6 +4,12 @@ pushd `dirname $0` >/dev/null
 SCRIPTDIR=`pwd -P`
 popd >/dev/null
 
+echo "Setting up dircolors..."
+if [[ -e ~/.dir_colors ]]; then
+    rm -rf ~/.dir_colors;
+fi
+ln -s $SCRIPTDIR/dir_colors ~/.dir_colors
+
 echo "Setting up vim..."
 rm -rf ~/.vimrc ~/.vim
 ln -s $SCRIPTDIR/vimrc ~/.vimrc
