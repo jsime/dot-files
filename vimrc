@@ -61,6 +61,10 @@ au BufNewFile,BufRead *.pgsql set filetype=pgsql
 au BufNewFile,BufRead *.asp set filetype=perl
 au BufNewFile,BufRead *.tt2 set filetype=tt2
 
+" reload (source) vimrc with \s and open it for editing with \v
+nmap <Leader>s :source $MYVIMRC
+nmap <Leader>v :e $MYVIMRC
+
 function! HasPaste()
     if &paste
         return '[PASTE]'
