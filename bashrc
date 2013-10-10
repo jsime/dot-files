@@ -54,3 +54,6 @@ else
 fi
 PS1="$PS1\[\e[1;34m\]) \[\e[1;34m\]\$\[\e[0m\] "
 export PS1
+
+# import local dir colors settings
+eval `dircolors -b $HOME/.dir_colors`
