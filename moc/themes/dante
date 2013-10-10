@@ -40,7 +40,7 @@ time_total_frames		= cyan		default
 
 sound_parameters		= cyan		default		bold
 legend					= cyan		default	
-disabled				= black		default		bold
+disabled				= green		default		bold
 enabled					= white		default
 
 empty_mixer_bar			= white		default	
