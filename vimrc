@@ -1,6 +1,9 @@
 set bs=2
 set nocompatible
 
+set showcmd
+set showmode
+
 syntax on
 set background=dark
 colorscheme solarized
