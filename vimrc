@@ -4,6 +4,9 @@ set nocompatible
 set showcmd
 set showmode
 
+set foldmethod=indent
+set nofoldenable
+
 syntax on
 set background=dark
 colorscheme solarized
