@@ -21,6 +21,9 @@ fi
 # alias irssi to a command which makes sure the config is up to date
 alias irssi="cat ~/.irssi/config.base ~/.private/irssi > ~/.irssi/config && /usr/bin/irssi"
 
+# alias 'vbm' to VBoxManage because camel-cased command names are treasonous
+alias vbm="VBoxManage"
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
