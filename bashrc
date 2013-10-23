@@ -60,3 +60,8 @@ export PS1
 
 # import local dir colors settings
 eval `dircolors -b $HOME/.dir_colors`
+
+# if there's an RVM install here, source it
+if [[ -e $HOME/.rvm/scripts/rvm ]]; then
+    source $HOME/.rvm/scripts/rvm
+fi
