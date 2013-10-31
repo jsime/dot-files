@@ -28,6 +28,7 @@ set incsearch hlsearch
 set ignorecase smartcase
 
 set colorcolumn=72,80,132
+hi ColorColumn ctermbg=0
 
 let perl_extended_vars = 1
 let perl_include_pod = 1
