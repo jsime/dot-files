@@ -23,6 +23,7 @@ alias irssi="cat ~/.irssi/config.base ~/.private/irssi > ~/.irssi/config && /usr
 
 # alias 'vbm' to VBoxManage because camel-cased command names are treasonous
 alias vbm="VBoxManage"
+alias vbmr="VBoxManage list runningvms"
 
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
