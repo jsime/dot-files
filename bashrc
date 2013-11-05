@@ -24,6 +24,9 @@ alias irssi="cat ~/.irssi/config.base ~/.private/irssi > ~/.irssi/config && /usr
 # alias 'vbm' to VBoxManage because camel-cased command names are treasonous
 alias vbm="VBoxManage"
 
+# alias the brightness command to run with the full path (so we can whitelist it in sudo)
+alias bright="sudo /home/jsime/bin/brightness"
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
