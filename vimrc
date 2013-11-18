@@ -49,6 +49,10 @@ hi GitGutterChange       ctermfg=226 ctermbg=235 " a changed line
 hi GitGutterDelete       ctermfg=1   ctermbg=235 " at least one removed line
 hi GitGutterChangeDelete ctermfg=136 ctermbg=235 " a changed line followed by at least one removed line
 
+highlight BadWhitespace ctermbg=red guibg=red
+match BadWhitespace /^\t\+/
+match BadWhitespace /\s\+$/
+
 au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
 au BufNewFile,BufRead *.mp set filetype=perl
 au BufNewFile,BufRead *.pgsql set filetype=pgsql
