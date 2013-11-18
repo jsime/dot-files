@@ -21,6 +21,13 @@ fi
 # alias irssi to a command which makes sure the config is up to date
 alias irssi="cat ~/.irssi/config.base ~/.private/irssi > ~/.irssi/config && /usr/bin/irssi"
 
+# alias 'vbm' to VBoxManage because camel-cased command names are treasonous
+alias vbm="VBoxManage"
+alias vbmr="VBoxManage list runningvms"
+
+# alias the brightness command to run with the full path (so we can whitelist it in sudo)
+alias bright="sudo /home/jsime/bin/brightness"
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
@@ -54,3 +61,11 @@ else
 fi
 PS1="$PS1\[\e[1;34m\]) \[\e[1;34m\]\$\[\e[0m\] "
 export PS1
+
+# import local dir colors settings
+eval `dircolors -b $HOME/.dir_colors`
+
+# if there's an RVM install here, source it
+if [[ -e $HOME/.rvm/scripts/rvm ]]; then
+    source $HOME/.rvm/scripts/rvm
+fi

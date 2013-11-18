@@ -91,7 +91,7 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     autolog = "yes";
-    theme = "my";
+    theme = "solarized";
     timestamps = "yes";
     completion_char = ":";
     activity_hide_level = "parts joins quits";

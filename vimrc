@@ -1,3 +1,12 @@
+set bs=2
+set nocompatible
+
+set showcmd
+set showmode
+
+set foldmethod=indent
+set nofoldenable
+
 syntax on
 set background=dark
 colorscheme solarized
@@ -17,6 +26,9 @@ set rulerformat=%64(%F,\ %l,%c%)
 
 set incsearch hlsearch
 set ignorecase smartcase
+
+set colorcolumn=72,80,132
+hi ColorColumn ctermbg=0
 
 let perl_extended_vars = 1
 let perl_include_pod = 1
@@ -59,6 +71,12 @@ au BufNewFile,BufRead *.pgsql set filetype=pgsql
 " this is only valid because the one project I work on that has .asp files is an Apache::ASP Perl project
 au BufNewFile,BufRead *.asp set filetype=perl
 au BufNewFile,BufRead *.tt2 set filetype=tt2
+" i never work with modula2, so make vim detect .md as markdown files instead
+au BufNewFile,BufRead *.md set filetype=markdown
+
+" reload (source) vimrc with \s and open it for editing with \v
+nmap <Leader>s :source $MYVIMRC
+nmap <Leader>v :e $MYVIMRC
 
 function! HasPaste()
     if &paste

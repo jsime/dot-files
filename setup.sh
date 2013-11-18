@@ -4,6 +4,12 @@ pushd `dirname $0` >/dev/null
 SCRIPTDIR=`pwd -P`
 popd >/dev/null
 
+echo "Setting up dircolors..."
+if [[ -e ~/.dir_colors ]]; then
+    rm -rf ~/.dir_colors;
+fi
+ln -s $SCRIPTDIR/dir_colors ~/.dir_colors
+
 echo "Setting up vim..."
 rm -rf ~/.vimrc ~/.vim
 ln -s $SCRIPTDIR/vimrc ~/.vimrc
@@ -85,6 +91,12 @@ if [[ -e ~/.Xresources ]]; then
     rm ~/.Xresources
 fi
 ln -s $SCRIPTDIR/Xresources ~/.Xresources
+
+echo "Setting up xsession..."
+if [[ -e ~/.xsession ]]; then
+    rm ~/.xsession
+fi
+ln -s $SCRIPTDIR/xsession ~/.xsession
 
 if [[ (-d ~/proj/bin-scripts) && !(-e ~/bin) ]]; then
     echo "Linking ~/bin to bin-scripts repo...";
