@@ -66,6 +66,12 @@ if [[ -d ~/.irssi ]]; then
 fi
 ln -s $SCRIPTDIR/irssi ~/.irssi
 
+echo "Setting up weechat..."
+if [[ -e ~/.weechat ]]; then
+    rm ~/.weechat
+fi
+ln -s $SCRIPTDIR/weechat ~/.weechat
+
 echo "Setting up moc..."
 if [[ -d ~/.moc ]]; then
     rm -rf ~/.moc;
