@@ -67,8 +67,8 @@ fi
 ln -s $SCRIPTDIR/irssi ~/.irssi
 
 echo "Setting up weechat..."
-if [[ -e ~/.weechat ]]; then
-    rm ~/.weechat
+if [[ -d ~/.weechat ]]; then
+    rm -rf ~/.weechat
 fi
 ln -s $SCRIPTDIR/weechat ~/.weechat
 
