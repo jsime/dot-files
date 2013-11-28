@@ -296,7 +296,7 @@ abstracts = {
   sb_default_bg = "%k%8";
 
   # background for topicbar at the top (defaults to sb_default_bg)
-  sb_topic_bg = "%W%0";
+  sb_topic_bg = "%W%8";
 
   # background for the statusbar of active window. You can also give
   # the foreground color.
