@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo /home/jsime/bin/backlight 3
