@@ -65,6 +65,11 @@ export PS1
 # import local dir colors settings
 eval `dircolors -b $HOME/.dir_colors`
 
+# if here's a Perlbrew setup here, source it
+if [[ -e $HOME/perl5/perlbrew/etc/bashrc ]]; then
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
+
 # if there's an RVM install here, source it
 if [[ -e $HOME/.rvm/scripts/rvm ]]; then
     source $HOME/.rvm/scripts/rvm

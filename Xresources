@@ -1,4 +1,4 @@
-Xft.dpi: 96
+!!Xft.dpi: 96
 Xft.antialias: true
 Xft.autohint: true
 Xft.hinting: true
@@ -10,8 +10,8 @@ URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: false
-URxvt.font: xft:Liberation Mono:style=regular:pixelsize=11
-URxvt.boldFont: xft:Liberation Mono:style=bold:pixelsize=11
+URxvt.font: xft:Liberation Mono:style=regular:pixelsize=14
+URxvt.boldFont: xft:Liberation Mono:style=bold:pixelsize=14
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: /usr/bin/chromium-browser
 URxvt*matcher.Button: 1

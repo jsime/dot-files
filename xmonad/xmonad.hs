@@ -13,6 +13,7 @@ main = do
         { modMask = mod4Mask
         , borderWidth = 0
         , terminal = "urxvt"
+        , startupHook = spawn "~/bin/xmonad-autostart.sh"
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((0, xF86AudioLowerVolume), spawn "amixer set Master playback 2.5dB- -q")
@@ -21,3 +22,4 @@ main = do
         , ((shiftMask, xF86AudioRaiseVolume), spawn "amixer set Master playback 10dB+ -q")
         , ((0, xF86AudioMute), spawn "amixer set Master playback 0% -q")
         ]
+
