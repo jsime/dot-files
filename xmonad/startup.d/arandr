@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HOST=$(hostname)
+
+if [[ $HOST == "tesla" ]]; then
+    ~/.screenlayout/office-asus-external.layout.sh
+fi
