@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/bin"
+export PATH="/opt/sbcl/bin:$PATH:$HOME/bin"
 export EDITOR="vim"
 export PAGER="less"
 export LESS=' -FRSX '
