@@ -52,7 +52,9 @@ PS1="$PS1\[\e[31;1m\]λ\[\e[0m\] "
 export PS1
 
 # import local dir colors settings
-eval `dircolors -b $HOME/.dir_colors`
+if [[ -e $HOME/.dir_colors ]]; then
+    eval `dircolors -b $HOME/.dir_colors`
+fi
 
 # if here's a Perlbrew setup here, source it
 if [[ -e $HOME/perl5/perlbrew/etc/bashrc ]]; then
