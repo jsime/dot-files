@@ -31,35 +31,24 @@ alias bright="sudo /home/jsime/bin/brightness"
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
-        echo -n "git: $BRANCH";
+        echo "[git: $BRANCH] ";
     else
         BRANCH=$(svn info 2>/dev/null | grep 'Repository Root' | tr '/' "\n" | tail -2 | tr "\n" '/' | sed -e 's/\/$//')
         if [[ $BRANCH ]]; then
-            echo -n "svn: $BRANCH";
+            echo "[svn: $BRANCH] ";
         else
             BRANCH=$(hg branch 2>/dev/null)
             if [[ $BRANCH ]]; then
-                echo -n "hg: $BRANCH";
-            else
-                echo -n "✗";
+                echo "[hg: $BRANCH] ";
             fi
         fi
     fi
     BRANCH=""
 }
 
-PS1="\[\e[1;34m\]\342\224\214(\[\e[0;36m\]\D{%H:%M %Z}\[\e[1;34m\])\[\e[0m\]"
-PS1="$PS1\[\e[1;34m\]\342\224\200(\[\e[0;36m\]\$?\[\e[1;34m\])\[\e[0m\]"
-PS1="$PS1\[\e[1;34m\]\342\224\200(\[\e[0;36m\]\$(ps1_vc)\[\e[1;34m\])\[\e[0m\]"
-PS1="$PS1\[\e[1;34m\]\342\224\200(\[\e[0;36m\]\w\[\e[1;34m\])\[\e[0m\]\n"
-PS1="$PS1\[\e[1;34m\]\342\224\224\342\224\200\342\224\200\[\e[0m\]"
-PS1="$PS1\[\e[1;34m\]("
-if [[ ${EUID} == 0 ]]; then
-    PS1="$PS1\[\e[1;31m\]\u\[\e[1;34m\]@\[\e[0;33m\]\h"
-else
-    PS1="$PS1\[\e[0;33m\]\u\[\e[1;34m\]@\[\e[0;33m\]\h"
-fi
-PS1="$PS1\[\e[1;34m\]) \[\e[1;34m\]\$\[\e[0m\] "
+PS1="[\[\e[32;1m\]\D{%H:%M %Z}\e[0m\]]⠒[\[\e[32m\]\u\[\e[33m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[35;1m\]\w\[\e[0m\]]\n"
+PS1="$PS1\[\e[34m\]\$(ps1_vc)\[\e[0m\]\[\e[31m\]\$?:\[\e[0m\]"
+PS1="$PS1\[\e[31;1m\]λ\[\e[0m\] "
 export PS1
 
 # import local dir colors settings
