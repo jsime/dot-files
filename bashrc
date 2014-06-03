@@ -56,6 +56,11 @@ if [[ -d /opt/sbcl ]]; then
     export SBCL_HOME=/opt/sbcl/lib/sbcl/
 fi
 
+# Add VMWare to the path if we've installed it on this machine
+if [[ -d /opt/vmware ]]; then
+    export PATH="$PATH:/opt/vmware/bin"
+fi
+
 # import local dir colors settings
 if [[ -e $HOME/.dir_colors ]]; then
     eval `dircolors -b $HOME/.dir_colors`
