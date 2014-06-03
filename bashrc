@@ -70,8 +70,3 @@ fi
 if [[ -e $HOME/perl5/perlbrew/etc/bashrc ]]; then
     source $HOME/perl5/perlbrew/etc/bashrc
 fi
-
-# if there's an RVM install here, source it
-if [[ -e $HOME/.rvm/scripts/rvm ]]; then
-    source $HOME/.rvm/scripts/rvm
-fi
