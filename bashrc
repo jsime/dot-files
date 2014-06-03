@@ -62,6 +62,11 @@ fi
 PS1="$PS1\[\e[1;34m\]) \[\e[1;34m\]\$\[\e[0m\] "
 export PS1
 
+# If we've installed SBCL to /opt/sbcl here, make sure SBCL_HOME is set properly
+if [[ -d /opt/sbcl ]]; then
+    export SBCL_HOME=/opt/sbcl/lib/sbcl/
+fi
+
 # import local dir colors settings
 eval `dircolors -b $HOME/.dir_colors`
 
