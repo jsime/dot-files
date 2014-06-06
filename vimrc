@@ -65,8 +65,11 @@ hi GitGutterDelete       ctermfg=1   ctermbg=235 " at least one removed line
 hi GitGutterChangeDelete ctermfg=136 ctermbg=235 " a changed line followed by at least one removed line
 
 highlight BadWhitespace ctermbg=200
-match BadWhitespace /^\t\+/
-match BadWhitespace /\s\+$/
+call matchadd('BadWhitespace', '\s\+$', 10)
+highlight TabIndents ctermbg=236
+call matchadd('TabIndents', '^\t\+', 5)
+highlight InlineTabs ctermbg=237
+call matchadd('InlineTabs', '\t\+', 4)
 
 au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
 au BufNewFile,BufRead *.mp set filetype=perl
