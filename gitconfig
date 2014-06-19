@@ -1,0 +1,11 @@
+[user]
+	email = jonsime@gmail.com
+	name = Jon Sime
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = simple
+[core]
+	pager = 
+[color]
+	ui = true

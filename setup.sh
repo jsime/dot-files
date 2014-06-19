@@ -39,6 +39,12 @@ if [[ -e ~/.tmux.conf ]]; then
 fi
 ln -s $SCRIPTDIR/tmux.conf ~/.tmux.conf
 
+echo "Setting up gitconfig..."
+if [[ -e ~/.gitconfig ]]; then
+    rm ~/.gitconfig;
+fi
+ln -s $SCRIPTDIR/gitconfig ~/.gitconfig
+
 echo "Setting up gntrc..."
 if [[ -e ~/.gntrc ]]; then
     rm ~/.gntrc;
