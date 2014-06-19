@@ -21,6 +21,8 @@ set expandtab
 
 " Shorter tabs in Ruby code (to match current employer's style guide)
 au BufNewFile,BufRead *.rb set ts=2 sw=2
+" Same tab settings for LISP as well
+au BufNewFile,BufRead *.lisp set ts=2 sw=2
 
 set number
 
