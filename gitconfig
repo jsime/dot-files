@@ -1,12 +1,13 @@
 [user]
-	email = jonsime@gmail.com
-	name = Jon Sime
+    email = jonsime@gmail.com
+    name = Jon Sime
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
     st = status --long --column
+    d = diff --patch --minimal --color --ignore-space-at-eol
 [push]
-	default = simple
+    default = simple
 [core]
-	pager = less
+    pager = less
 [color]
-	ui = true
+    ui = true
