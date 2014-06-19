@@ -28,6 +28,9 @@ alias vbmr="VBoxManage list runningvms"
 # alias the brightness command to run with the full path (so we can whitelist it in sudo)
 alias bright="sudo /home/jsime/bin/brightness"
 
+# alias 'lh' to a long ls with human readable sizes
+alias lh='ls -laFh'
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
