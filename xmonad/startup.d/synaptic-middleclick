@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Enable middle-click emulation with three-finger click on Synaptics touchpad
+synclient TapButton3=2
