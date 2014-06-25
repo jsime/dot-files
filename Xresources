@@ -1,19 +1,21 @@
 !!Xft.dpi: 96
-Xft.antialias: true
-Xft.autohint: true
-Xft.hinting: true
-Xft.hintstyle: hintfull
-Xft.rgba: rgb
-Xft.lcdfilter: lcddefault
+!!Xft.antialias: true
+!!Xft.autohint: false
+!!Xft.hinting: true
+!!Xft.hintstyle: hintfull
+!!Xft.rgba: rgb
+!!Xft.lcdfilter: lcddefault
 
 URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: false
-URxvt.font: xft:Liberation Mono:style=regular:pixelsize=14
-URxvt.boldFont: xft:Liberation Mono:style=bold:pixelsize=14
-!!URxvt.font: xft:Inconsolata:style=regular:pixelsize=18
-!!URxvt.boldFont: xft:Inconsolata:style=bold:pixelsize=18
+URxvt.font: xft:Liberation Mono:style=regular:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
+URxvt.boldFont: xft:Liberation Mono:style=bold:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
+!!URxvt.font: xft:Liberation Mono:style=regular:pixelsize=14
+!!URxvt.boldFont: xft:Liberation Mono:style=bold:pixelsize=14
+!!URxvt.font: xft:Inconsolata:style=regular:pixelsize=16
+!!URxvt.boldFont: xft:Inconsolata:style=bold:pixelsize=16
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: /usr/bin/chromium-browser
 URxvt*matcher.Button: 1
