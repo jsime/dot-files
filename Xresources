@@ -1,24 +1,29 @@
-!!Xft.dpi: 96
-!!Xft.antialias: true
-!!Xft.autohint: false
-!!Xft.hinting: true
-!!Xft.hintstyle: hintfull
-!!Xft.rgba: rgb
-!!Xft.lcdfilter: lcddefault
+Xft.dpi: 100
+Xft.antialias: true
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 
 URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: false
-URxvt.font: xft:Liberation Mono:style=regular:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-URxvt.boldFont: xft:Liberation Mono:style=bold:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-!!URxvt.font: xft:Liberation Mono:style=regular:pixelsize=14
-!!URxvt.boldFont: xft:Liberation Mono:style=bold:pixelsize=14
-!!URxvt.font: xft:Inconsolata:style=regular:pixelsize=16
-!!URxvt.boldFont: xft:Inconsolata:style=bold:pixelsize=16
 URxvt*perl-ext-common: default,matcher
 URxvt*urlLauncher: /usr/bin/chromium-browser
 URxvt*matcher.Button: 1
+
+!! *** The dimenions mentioned on these fonts are only accurate for (Xu|U)buntu
+!! *** installs. Fonts rendered differently on a Debian VM.
+
+!! 4 pixels short on the right edge of a 2560x1440 terminal // 284 cols, 96 rows
+URxvt.font: xft:Liberation Mono:style=regular:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
+URxvt.boldFont: xft:Liberation Mono:style=bold:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
+
+!! Matches up exactly on a 2560x1440 terminal               // 256 cols, 80 rows
+!!URxvt.font: xft:Inconsolata:style=regular:size=10:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
+!!URxvt.boldFont: xft:Inconsolata:style=bold:size=10:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
