@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -d ~/.wallpaper ]; then
+    feh --bg-scale --randomize ~/.wallpaper/
+fi
