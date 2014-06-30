@@ -73,3 +73,9 @@ fi
 if [[ -e $HOME/perl5/perlbrew/etc/bashrc ]]; then
     source $HOME/perl5/perlbrew/etc/bashrc
 fi
+
+# similarly, source GVM environment if we have that installed
+if [[ -e $HOME/.gvm/scripts/gvm ]]; then
+    source /home/jsime/.gvm/scripts/gvm
+fi
+
