@@ -73,6 +73,16 @@ call matchadd('TabIndents', '^\t\+', 5)
 highlight InlineTabs ctermbg=237
 call matchadd('InlineTabs', '\t\+', 4)
 
+" add golang support files from local GVM installations, only if they appear
+" to exist
+let golangenv=$GOROOT . '/misc/vim/readme.txt'
+if filereadable(golangenv)
+    filetype off
+    filetype plugin indent off
+    set runtimepath+=$GOROOT/misc/vim
+    filetype plugin indent on
+endif
+
 au BufNewFile,BufRead *.mc,*.mi set filetype=mason2
 au BufNewFile,BufRead *.mp set filetype=perl
 au BufNewFile,BufRead *.pgsql set filetype=pgsql
