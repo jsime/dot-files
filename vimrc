@@ -1,5 +1,6 @@
 set bs=2
 set nocompatible
+set encoding=utf-8
 
 set showcmd
 set showmode
