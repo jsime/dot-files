@@ -49,7 +49,13 @@ function ps1_vc {
     BRANCH=""
 }
 
-PS1="[\[\e[33m\]\D{%H:%M %Z}\e[0m\]]⠒[\[\e[32m\]\u\[\e[33m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[35;1m\]\w\[\e[0m\]]\n"
+PS1="[\[\e[33m\]\D{%H:%M %Z}\e[0m\]]⠒["
+if [[ ${EUID} == 0 ]]; then
+    PS1="$PS1\[\e[31m\]\u"
+else
+    PS1="$PS1\[\e[32m\]\u"
+fi
+PS1="$PS1\[\e[33m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[35;1m\]\w\[\e[0m\]]\n"
 PS1="$PS1\[\e[34m\]\$(ps1_vc)\[\e[0m\]\[\e[31m\]\$?:\[\e[0m\]"
 PS1="$PS1\[\e[31;1m\]λ\[\e[0m\] "
 export PS1
