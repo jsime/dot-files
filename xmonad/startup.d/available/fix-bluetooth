@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DEVID=$(rfkill list | grep asus-bluetooth | awk -F: '{print $1}')
+if [[ ! -z $DEVID ]]; then
+    HCIID=$(rfkill list | grep hci0 | awk -F: '{print $1}')
+    if [[ -z $HCIID ]]; then
+        # Found the asus-bluetooth device, but not a functioning hci0, so
+        # mark the asus-bluetooth as blocked and that *should* get hci0 working
+        rfkill block $DEVID
+    fi
+fi
