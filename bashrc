@@ -1,10 +1,9 @@
-export PATH="/opt/sbcl/bin:$PATH:$HOME/bin"
+# Don't process these customizations if the shell is non-interactive
+[[ $- != *i* ]] && return
+
 export EDITOR="vim"
 export PAGER="less"
 export LESS=' -FRSX '
-
-# Don't process the rest of these customizations if the shell is non-interactive
-[[ $- != *i* ]] && return
 
 # set readline mode to Vi style, instead of the default emacs mode
 set -o vi
@@ -60,14 +59,24 @@ PS1="$PS1\[\e[34m\]\$(ps1_vc)\[\e[0m\]\[\e[31m\]\$?:\[\e[0m\]"
 PS1="$PS1\[\e[31;1m\]λ\[\e[0m\] "
 export PS1
 
+# Make sure our local bin/ is in the PATH
+if [[ ! ":$PATH:" == *":$HOME/bin:"* ]]; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
 # If we've installed SBCL to /opt/sbcl here, make sure SBCL_HOME is set properly
 if [[ -d /opt/sbcl ]]; then
     export SBCL_HOME=/opt/sbcl/lib/sbcl/
+    if [[ ! ":$PATH:" == *":/opt/sbcl/bin:"* ]]; then
+        export PATH="$PATH:/opt/sbcl/bin"
+    fi
 fi
 
 # Add VMWare to the path if we've installed it on this machine
-if [[ -d /opt/vmware ]]; then
-    export PATH="$PATH:/opt/vmware/bin"
+if [[ ! ":$PATH:" == *":/opt/vmware/bin:"* ]]; then
+    if [[ -d /opt/vmware ]]; then
+        export PATH="$PATH:/opt/vmware/bin"
+    fi
 fi
 
 # import local dir colors settings
@@ -85,3 +94,9 @@ if [[ -e $HOME/.gvm/scripts/gvm ]]; then
     source /home/jsime/.gvm/scripts/gvm
 fi
 
+# if we've got Packer installed on this machine, add it to our PATH
+if [[ ! ":$PATH:" == *":/usr/local/packer:"* ]]; then
+    if [[ -d /usr/local/packer ]]; then
+        export PATH="$PATH:/usr/local/packer"
+    fi
+fi
