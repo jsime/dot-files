@@ -30,6 +30,10 @@ alias bright="sudo /home/jsime/bin/brightness"
 # alias 'lh' to a long ls with human readable sizes
 alias lh='ls -laFh'
 
+# shorthand for verbose process listing in standard syntax (pse) and BSD syntax (psa)
+alias pse='ps -elfy'
+alias psa='ps aux'
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
