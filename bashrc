@@ -5,6 +5,9 @@ export EDITOR="vim"
 export PAGER="less"
 export LESS=' -FRSX '
 
+# for various bluetooth shenanigans, having the device path is handy
+export BLUEPATH="/org/bluez/$(pidof bluetoothd)/hci1"
+
 # set readline mode to Vi style, instead of the default emacs mode
 set -o vi
 
