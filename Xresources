@@ -10,9 +10,9 @@ URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.transparent: false
-URxvt*perl-ext-common: default,matcher
-URxvt*urlLauncher: /usr/bin/chromium-browser
-URxvt*matcher.Button: 1
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium-browser
+URxvt.matcher.button: 2
 
 !! *** The dimenions mentioned on these fonts are only accurate for (Xu|U)buntu
 !! *** installs. Fonts rendered differently on a Debian VM.
