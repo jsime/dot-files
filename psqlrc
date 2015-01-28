@@ -4,6 +4,8 @@
 \pset linestyle unicode
 \pset border 2
 \pset format wrapped
+\pset numericlocale on
 \set PROMPT1 '%n@%M %x%/=%# '
 \set PROMPT2 '%n@%M %x%/-%# '
 \set PROMPT3 '>> '
+set client_min_messages to warning
