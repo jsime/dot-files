@@ -74,6 +74,9 @@ call matchadd('TabIndents', '^\t\+', 5)
 highlight InlineTabs ctermbg=237
 call matchadd('InlineTabs', '\t\+', 4)
 
+" enable tree style listing in netrw
+let g:netrw_liststyle=3
+
 " add golang support files from local GVM installations, only if they appear
 " to exist
 let golangenv=$GOROOT . '/misc/vim/readme.txt'
