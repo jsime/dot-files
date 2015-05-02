@@ -44,6 +44,9 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
+set undofile
+set undodir=~/.vim/undo
+
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
 set statusline+=\ \ \ [%{&ff}/%Y] 
