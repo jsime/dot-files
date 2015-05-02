@@ -1,12 +1,6 @@
-!!Xft.dpi: 100
-!!Xft.antialias: true
-!!Xft.autohint: false
-!!Xft.hinting: true
-!!Xft.hintstyle: hintfull
-!!Xft.rgba: rgb
-!!Xft.lcdfilter: lcddefault
-
+URxvt.allow_bold: true
 URxvt.letterSpace: 0
+URxvt.lineSpace: 0
 URxvt.fading: 15
 URxvt.internalBorder: 0
 URxvt.scrollBar: false
@@ -15,23 +9,17 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/chromium-browser
 URxvt.matcher.button: 2
 
-!! *** The dimenions mentioned on these fonts are only accurate for (Xu|U)buntu
-!! *** installs. Fonts rendered differently on a Debian VM.
+Xft.antialias: true
+Xft.autohint: false
+Xft.dpi: 120
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
-!! Perfect dog-gone fit, matching 2560x1440 exactly         // 320 cols, 96 rows
 !! Requires Powerline fonts: https://github.com/powerline/fonts
-URxvt.font: xft:Ubuntu Mono derivative Powerline:style=regular:size=8:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-URxvt.boldFont: xft:Ubuntu Mono derivative Powerline:style=bold:size=8:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-
-!! 4 pixels short on the right edge of a 2560x1440 terminal // 284 cols, 96 rows
-!!URxvt.font: xft:Liberation Mono:style=regular:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-!!URxvt.boldFont: xft:Liberation Mono:style=bold:size=9:dpi=100:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-
-!! Matches up exactly on a 2560x1440 terminal               // 256 cols, 80 rows
-!!URxvt.font: xft:Inconsolata:style=regular:size=10:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-!!URxvt.boldFont: xft:Inconsolata:style=bold:size=10:dpi=120:antialias=true:autohint=false:hinting=true:hintstyle=hintfull:rgba=rgb:lcdfilter=lcddefault
-
-!! drop in Solarized colorscheme for Xresources/Xdefaults
+URxvt.font: xft:Ubuntu Mono derivative Powerline:style=regular:size=8
+URxvt.boldFont: xft:Ubuntu Mono derivative Powerline:style=bold:size=8
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
