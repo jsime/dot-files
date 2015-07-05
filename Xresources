@@ -18,8 +18,8 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
 !! Requires Powerline fonts: https://github.com/powerline/fonts
-URxvt.font: xft:Ubuntu Mono derivative Powerline:style=regular:size=8
-URxvt.boldFont: xft:Ubuntu Mono derivative Powerline:style=bold:size=8
+URxvt.font: xft:Ubuntu Mono derivative Powerline:style=regular:size=9
+URxvt.boldFont: xft:Ubuntu Mono derivative Powerline:style=bold:size=9
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
