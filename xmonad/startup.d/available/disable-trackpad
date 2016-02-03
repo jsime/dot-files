@@ -2,3 +2,4 @@
 
 # Disable synaptics trackpad while typing
 syndaemon -d -i 2
+#syndaemon -d -i 1 -t

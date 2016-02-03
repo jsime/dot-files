@@ -20,10 +20,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Shorter tabs in HTML
+au BufNewFile,BufRead *.html set ts=2 sw=2
 " Shorter tabs in Ruby code (to match current employer's style guide)
 au BufNewFile,BufRead *.rb set ts=2 sw=2
-" Same tab settings for LISP as well
+" Same tab settings for LISP and Clojure as well
 au BufNewFile,BufRead *.lisp set ts=2 sw=2
+au BufNewFile,BufRead *.clj set ts=2 sw=2
 
 set number
 
@@ -43,6 +46,9 @@ let perl_want_scope_in_variables = 1
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
+
+set undofile
+set undodir=~/.vim/undo
 
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
@@ -116,3 +122,10 @@ function! CurDir()
     return curdir
 endfunction
 
+function! AppendModeline()
+    let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
+        \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
+    let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+    call append(line("$"), l:modeline)
+endfunction
+nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
