@@ -37,6 +37,9 @@ alias lh='ls -laFh'
 alias pse='ps -elfy'
 alias psa='ps aux'
 
+# ansible shortcuts
+alias ap='ansible-playbook'
+
 function ps1_vc {
     BRANCH=$(git branch 2>/dev/null | grep "^\*" | cut -c3-)
     if [[ $BRANCH ]]; then
