@@ -13,4 +13,5 @@ moc/equalizer
 moc/softmixer
 vim/backup
 vim/tmp
+vim/undo
 weechat/logs/

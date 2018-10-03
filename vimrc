@@ -20,10 +20,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Shorter tabs in HTML
+au BufNewFile,BufRead *.html set ts=2 sw=2
 " Shorter tabs in Ruby code (to match current employer's style guide)
 au BufNewFile,BufRead *.rb set ts=2 sw=2
-" Same tab settings for LISP as well
+" Same tab settings for LISP and Clojure as well
 au BufNewFile,BufRead *.lisp set ts=2 sw=2
+au BufNewFile,BufRead *.clj set ts=2 sw=2
 
 set number
 
